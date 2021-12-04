@@ -11,6 +11,10 @@ const resolvers = {
     Track: {
         author: ({ authorId }, _, { dataSources }) => dataSources.trackApi.getAuthor(authorId),
         modules: ({ id }, _, { dataSources }) => dataSources.trackApi.getModules(id),
+        durationInSeconds: ({ length }) => length
+    },
+    Module: {
+        durationInSeconds: ({ length }) => length,
     },
 };
 
