@@ -1,3 +1,5 @@
 # apollo-graphql-odyssey
 
-Based on Apollo's Odyssey series of tutorials, see [here](https://studio.apollographql.com/graph/Odysesey/explorer?variant=current).
+## Catstronauts - server
+
+The starting point of the `server` code for Odyssey Lift-off I course.
