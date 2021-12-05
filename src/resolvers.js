@@ -3,7 +3,9 @@ const resolvers = {
         // Returns an array of tracks
         tracksForHome: (_, __, { dataSources }) => dataSources.trackApi.getTracksForHome(),
         // Get a single track by ID, for the track page
-        track: (_, { id }, { dataSources}) => dataSources.trackApi.getTrack(id)
+        track: (_, { id }, { dataSources }) => dataSources.trackApi.getTrack(id),
+        // Get a single module by ID, for the module page
+        module: (_, { id }, { dataSources }) => dataSources.trackApi.getModule(id)
     },
     Mutation: {
         incrementTrackViews: (_, { id }, { dataSources }) => dataSources.trackApi.incrementTrackViews(id)
@@ -14,7 +16,7 @@ const resolvers = {
         durationInSeconds: ({ length }) => length
     },
     Module: {
-        durationInSeconds: ({ length }) => length,
+        durationInSeconds: ({ length }) => length
     },
 };
 

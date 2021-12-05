@@ -6,6 +6,8 @@ const typeDefs = gql`
         tracksForHome: [Track]
         "Fetch a specific track, provided a track's ID"
         track(id: ID!): Track
+        "Fetch a specific track, provided a track's ID"
+        module(id: ID!): Module
     }
     
     type Mutation {
@@ -55,6 +57,10 @@ const typeDefs = gql`
         length: Int @deprecated(reason:"Use durationInSeconds")
         "The module's video duration, in seconds"
         durationInSeconds: Int
+        ""
+        content: String!
+        ""
+        videoUrl: String!
     }
 
     type IncrementTrackViewsResponse {
